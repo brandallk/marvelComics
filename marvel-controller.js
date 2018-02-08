@@ -11,18 +11,18 @@ MarvelController = function MarvelController(){
         // console.log(arr)
         var template = ''
         var marvelElem = document.getElementById("marvel-characters")
-        for(var i =0; i<arr.length;i++){
+        for(var i = 0; i < arr.length; i++) {
             var char = arr[i]
             char.description = char.description ? char.description : 'No Description Avalable'
-            template +=`
+            template += `
             <div class="col-4">
-			<img src="${char.thumbnail.path + '.' + char.thumbnail.extension}" alt="">
-			<h4><b>Name:</b> ${char.name}</h4>
-			<p><b>Description:</b> ${char.description}</p>
-			<p><b>Comic Appearances:</b>${char.comics.available}</p>
-			<button class="btn btn-success" onclick="app.controllers.marvelCtrl.addToTeam(${char.id})">Add to team</button>
-		</div>
-        `
+                <img src="${char.thumbnail.path + '.' + char.thumbnail.extension}" alt="">
+                <h4><b>Name:</b> ${char.name}</h4>
+                <p><b>Description:</b> ${char.description}</p>
+                <p><b>Comic Appearances:</b>${char.comics.available}</p>
+                <button class="btn btn-success" onclick="app.controllers.marvelCtrl.addToTeam(${char.id})">Add to team</button>
+            </div>
+            `
     }
     marvelElem.innerHTML = template
 }

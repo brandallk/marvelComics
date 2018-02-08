@@ -8,7 +8,7 @@ MarvelService = function MarvelService() {
 
     // stringify this later
     this.getMyTeam = function() {
-        return myTeam
+        return JSON.parse(JSON.stringify(myTeam))
     }
 
     this.addToTeam = function(id) {
